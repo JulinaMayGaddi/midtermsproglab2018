@@ -1,0 +1,30 @@
+import java.util.*;
+
+
+public  class DiverseT{
+    public static void main(String...args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        ArrayList<Integer> a1 = new ArrayList<>();
+        ArrayList<Integer> a2 = new ArrayList<>();
+        for(int i = 0; i < n; i++){
+            int a = sc.nextInt();
+            if(!a1.contains(a)){a1.add(a);if(a2.size()<k)a2.add(i+1);}
+        }
+        if(a1.size()>=k){
+            System.out.println("YES");
+            for(int i=0;i<a2.size();i++){
+                System.out.print(ar2.get(i)+" ");
+            }
+        }
+        else{System.out.println("NO");}
+    }
+    public  static  void  print ( int [] arr ) {
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println("");
+    }
+    
+}
