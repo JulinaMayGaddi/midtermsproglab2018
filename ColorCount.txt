@@ -1,0 +1,18 @@
+
+    /**
+     * The program will help identify the three colors of the petals and flowers.
+     * 
+     * @param word - represents the color of every petal and flower.
+     */
+     
+    public static String colorCount(word){
+	Scanner kbd = new Scanner(System.in);
+		String word = kbd.next();
+		
+		if (word.contains("ABC") || word.contains("ACB") || word.contains("BAC") || 
+				word.contains("BCA") || word.contains("CAB") || word.contains("CBA"))
+			System.out.println("YES");
+		else
+			System.out.println("NO");
+		kbd.close();
+    }
