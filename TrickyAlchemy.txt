@@ -1,0 +1,38 @@
+   /**
+     * This method determines how many additional crystals the user should acquire in order to produce the required number of balls.
+     * 
+     * @param availYellowC   - The available number of user's yellow crystal in hand.
+     * @param availBlueC   - The available number of user's blue crystal in hand.
+     * @param yBalls   - The number of yellow balls that the user needed.
+     * @param gBalls  - The number of green balls that the user needed.
+     * @param bBalls  - The number of blue balls that the user needed.
+     * @return A single integer which is the number of crystals that the user need to add in order to acquire the given balls.
+     * 
+     */
+    public static int trickyAlchemy(int availYellowC, int availBlueC, int yBalls, int gBalls, int bBalls){
+        int yellowC = 1;
+        int blueC = 1;
+        int totalYellowB = yBalls * (yellowC + 1);
+        int totalGreenBY = gBalls * yellowC;
+        int totalGreenBB = gBalls * blueC;
+        int totalBlueB = bBalls * (blueC + 2);
+        int neededYellow = totalGreenBY + totalYellowB; 
+        int neededBlue = totalGreenBB + totalBlueB;
+        int amountYellow = 0;
+        int amountBlue = 0;
+        int amountTotal = 0;
+        if(availYellowC > neededYellow){
+            amountYellow = 0;
+        }else{
+            amountYellow = neededYellow - availYellowC;
+        }
+        if(availBlueC > neededBlue){
+            amountBlue = 0;
+        }else{
+            amountBlue = neededBlue - availBlueC;
+        }
+
+        return amountTotal = amountBlue + amountYellow;
+    }
+
+
